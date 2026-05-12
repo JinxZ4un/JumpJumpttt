@@ -1,0 +1,92 @@
+import { LevelData } from '../types';
+
+export const LEVELS: LevelData[] = [
+  {
+    id: 1,
+    name: "Beginner's Trial",
+    description: "Learn the basics of jumping over obstacles.",
+    difficulty: "Easy",
+    requiredScore: 3,
+    platforms: [
+      { id: 'p1', x: 0, y: 80, width: 20, height: 20, type: 'static' },
+      { id: 'p2', x: 25, y: 70, width: 15, height: 20, type: 'static' },
+      { id: 'p3', x: 50, y: 60, width: 15, height: 20, type: 'static' },
+      { id: 'p4', x: 75, y: 50, width: 15, height: 20, type: 'static' },
+    ],
+    obstacles: [
+      { id: 'o1', type: 'spike', x: 20, width: 5, height: 5 },
+      { id: 'o2', type: 'spike', x: 40, width: 5, height: 5 },
+      { id: 'o3', type: 'spike', x: 65, width: 5, height: 5 },
+      { id: 'o4', type: 'spike', x: 90, width: 5, height: 5 },
+    ],
+  },
+  {
+    id: 2,
+    name: "Hot Floor",
+    description: "Careful with the lava below!",
+    difficulty: "Medium",
+    requiredScore: 5,
+    platforms: [
+      { id: 'p1', x: 0, y: 70, width: 12, height: 5, type: 'static' },
+      { id: 'p2', x: 20, y: 60, width: 12, height: 5, type: 'static' },
+      { id: 'p3', x: 40, y: 50, width: 12, height: 5, type: 'vanishing' },
+      { id: 'p4', x: 60, y: 40, width: 12, height: 5, type: 'vanishing' },
+      { id: 'p5', x: 80, y: 50, width: 12, height: 5, type: 'static' },
+    ],
+    obstacles: [
+      { id: 'o1', type: 'lava', x: 0, width: 100, height: 10 },
+      { id: 'o2', type: 'spike', x: 12, width: 8, height: 5 },
+      { id: 'o3', type: 'spike', x: 32, width: 8, height: 5 },
+      { id: 'o4', type: 'spike', x: 52, width: 8, height: 5 },
+      { id: 'o5', type: 'spike', x: 72, width: 8, height: 5 },
+    ],
+  },
+  {
+    id: 3,
+    name: "Double Sky",
+    description: "Master the double jump to traverse heights.",
+    difficulty: "Medium",
+    hasDoubleJump: true,
+    requiredScore: 6,
+    platforms: [
+      { id: 'p1', x: 0, y: 80, width: 15, height: 5, type: 'static' },
+      { id: 'p2', x: 20, y: 60, width: 10, height: 5, type: 'static' },
+      { id: 'p3', x: 40, y: 40, width: 10, height: 5, type: 'static' },
+      { id: 'p4', x: 60, y: 25, width: 10, height: 5, type: 'static' },
+      { id: 'p5', x: 80, y: 45, width: 15, height: 5, type: 'static' },
+      { id: 'p6', x: 40, y: 70, width: 10, height: 5, type: 'vanishing' },
+    ],
+    obstacles: [
+      { id: 'o1', type: 'spike', x: 15, width: 5, height: 5 },
+      { id: 'o2', type: 'spike', x: 30, width: 10, height: 5 },
+      { id: 'o3', type: 'spike', x: 50, width: 10, height: 5 },
+      { id: 'o4', type: 'spike', x: 70, width: 10, height: 5 },
+      { id: 'o5', type: 'spike', x: 25, width: 5, height: 10 },
+    ],
+  },
+  {
+    id: 4,
+    name: "Mach Speed",
+    description: "High speed obstacles requiring quick reflexes.",
+    difficulty: "Expert",
+    hasDoubleJump: true,
+    hasDashing: true,
+    requiredScore: 8,
+    platforms: [
+      { id: 'p1', x: 0, y: 75, width: 12, height: 5, type: 'static' },
+      { id: 'p2', x: 15, y: 60, width: 8, height: 5, type: 'vanishing' },
+      { id: 'p3', x: 30, y: 50, width: 10, height: 5, type: 'bouncy' },
+      { id: 'p4', x: 45, y: 35, width: 8, height: 5, type: 'vanishing' },
+      { id: 'p5', x: 60, y: 50, width: 8, height: 5, type: 'vanishing' },
+      { id: 'p6', x: 75, y: 65, width: 8, height: 5, type: 'vanishing' },
+      { id: 'p7', x: 88, y: 45, width: 12, height: 5, type: 'static' },
+    ],
+    obstacles: [
+      { id: 'o1', type: 'moving_wall', x: 50, width: 6, height: 40, speed: 2, direction: 'horizontal' },
+      { id: 'o2', type: 'spike', x: 25, width: 4, height: 5 },
+      { id: 'o3', type: 'spike', x: 40, width: 4, height: 5 },
+      { id: 'o4', type: 'spike', x: 70, width: 4, height: 5 },
+      { id: 'o5', type: 'lava', x: 0, width: 100, height: 4 },
+    ],
+  }
+];
